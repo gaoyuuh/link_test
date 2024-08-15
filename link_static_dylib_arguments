@@ -1,0 +1,40 @@
+# static_dylib
+-reproducible 
+-syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator17.4.sdk 
+-O0 
+
+-L/Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator 
+-L/Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Products/Debug-iphonesimulator 
+
+-F/Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator 
+-F/Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Products/Debug-iphonesimulator 
+-F/Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Products/Debug-iphonesimulator/TestA 
+-F/Users/gaoyu/Desktop/link_test/Xcode-demo/Pods/../Modules/OGThird/OGThird/Lib 
+
+-filelist /Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/testFramework.build/Debug-iphonesimulator/testFramework.build/Objects-normal/arm64/testFramework.LinkFileList  
+
+-rpath  @executable_path/Frameworks  
+-rpath  @loader_path/Frameworks 
+-dead_strip  
+-object_path_lto  /Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/testFramework.build/Debug-iphonesimulator/testFramework.build/Objects-normal/arm64/testFramework_lto.o  
+-export_dynamic  
+-no_deduplicate  
+-objc_abi_version 2 
+
+-ObjC 
+-lc 
+-framework Shared 
+-framework TestA  
+
+-sectcreate  __TEXT  __entitlements  /Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/testFramework.build/Debug-iphonesimulator/testFramework.build/testFramework.app-Simulated.xcent  
+-sectcreate  __TEXT  __ents_der  /Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/testFramework.build/Debug-iphonesimulator/testFramework.build/testFramework.app-Simulated.xcent.der 
+
+-framework Pods_testFramework  
+
+-no_adhoc_codesign  
+-dependency_info  /Users/gaoyu/Library/Developer/Xcode/DerivedData/testFramework-eluvicujvpnnhlbackiiwbvcukli/Build/Intermediates.noindex/testFramework.build/Debug-iphonesimulator/testFramework.build/Objects-normal/arm64/testFramework_dependency_info.dat 
+
+-o /Users/gaoyu/Desktop/link_test/testFramework_static_dylib 
+
+-map /Users/gaoyu/Desktop/link_test/link_static_dylib_map
+-v

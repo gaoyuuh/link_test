@@ -1,0 +1,44 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '12.0'
+
+source 'git@git.kanzhun-inc.com:bosszhipinspec/bosszpspec.git'
+
+#use_modular_headers!
+use_frameworks! :linkage => :static
+#plugin 'cocoapods-kz'
+
+#kz_pod 'WCDBOptimizedSQLCipher', :force_load => true
+#kz_pod 'SQLCipher', :force_load => true
+
+# 组件
+pod 'TestA', :path => './Modules/TestA', :inhibit_warnings => false
+#pod 'TestB', :path => './Modules/TestB', :inhibit_warnings => false
+pod 'OGThird', :path => './Modules/OGThird', :inhibit_warnings => false
+
+
+target 'testFramework' do
+
+end
+
+post_install do |installer|
+
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      
+      config.build_settings['OTHER_CFLAGS'] ||= ['$(inherited)']
+      config.build_settings['OTHER_CFLAGS'] << '-Wno-error=non-modular-include-in-framework-module'
+#      config.build_settings['OTHER_CFLAGS'] << '-fvisibility=default'
+      
+      config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+      
+      puts target.name
+      
+#      if target.name == 'SQLCipher'
+#        config.build_settings['DEFINES_MODULE'] = 'NO'
+#        config.build_settings['MODULEMAP_FILE'] = ''
+#      end
+      
+    end
+  end
+  
+end

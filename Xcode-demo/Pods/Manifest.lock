@@ -1,0 +1,21 @@
+PODS:
+  - OGThird (0.1.0)
+  - TestA (0.1.0)
+
+DEPENDENCIES:
+  - OGThird (from `./Modules/OGThird`)
+  - TestA (from `./Modules/TestA`)
+
+EXTERNAL SOURCES:
+  OGThird:
+    :path: "./Modules/OGThird"
+  TestA:
+    :path: "./Modules/TestA"
+
+SPEC CHECKSUMS:
+  OGThird: 8705b013b69683a470d890a6be28cae0ea58c1d6
+  TestA: cf2008b236c4c0ee33729861a3ab4f3ab4e985e1
+
+PODFILE CHECKSUM: 785fca3dc8d6cfd233a56d5d430dff884401804b
+
+COCOAPODS: 1.15.2
