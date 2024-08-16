@@ -1,0 +1,17 @@
+.DS_Store
+build/
+.vscode/
+leak.app
+
+Pods/
+**/Pods
+
+*.pyc
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+xcuserdata/
+*.xcbkptlist
+*.xcuserstate

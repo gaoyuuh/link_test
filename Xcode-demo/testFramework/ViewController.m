@@ -20,6 +20,10 @@ void test1(void) {
     return;
 }
 
+static void test2_static(void) {
+    
+}
+
 @interface ViewController () {
     void*               _db;
 }

@@ -1,6 +1,0 @@
-framework module OGThird {
-  umbrella header "OGThird-umbrella.h"
-
-  export *
-  module * { export * }
-}
