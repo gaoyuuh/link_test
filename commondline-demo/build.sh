@@ -7,6 +7,8 @@ clang -dynamiclib -o libshared1.dylib shared1.c
 clang -dynamiclib -o libshared2.dylib shared2.c
 
 #  -Xlinker -all_load
+# -Xlinker -dead_strip
 # clang -o main main.c -L. -lshared1 -lstatic1
+# clang -o main main.c -L. -lstatic2 -lstatic1 -Xlinker -dead_strip
 clang -o main main.c -L. -lshared1 -lstatic1
-./main
+./main 

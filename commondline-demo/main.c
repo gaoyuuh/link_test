@@ -9,7 +9,7 @@ void shared2_method();
 
 int main() {
     static1_method();
-    // shared1_method();
+    shared1_method();
     hello();
     return 0;
 }
